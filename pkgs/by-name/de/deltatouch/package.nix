@@ -44,6 +44,11 @@ stdenv.mkDerivation rec {
     cp --no-preserve=mode ${quirc}/lib/libquirc.so.1.0 build/plugins/DeltaHandler/libquirc.so.1.2
   '';
 
+  postInstall = ''
+    mkdir -p $out/bin
+    mv $out/deltatouch $out/bin
+  '';
+
   buildInputs = [
     qt5.qtbase
     qt5.qtwebengine
