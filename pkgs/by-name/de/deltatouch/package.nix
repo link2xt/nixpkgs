@@ -7,6 +7,7 @@
 , clickable
 , qt5
 , quirc
+, lomiri
 }:
 
 stdenv.mkDerivation rec {
@@ -53,6 +54,10 @@ stdenv.mkDerivation rec {
     qt5.qtbase
     qt5.qtwebengine
     qt5.qtquickcontrols2
+    lomiri.lomiri-ui-toolkit
+    lomiri.lomiri-ui-extras
+    lomiri.lomiri-api
+    lomiri.lomiri-indicator-network # Lomiri.Connectivity module
 #    (libdeltachat.overrideAttrs { patches = [ "${src}/libs/patches/dc_core_rust-CMakeLists.patch" ]; })
 #    quirc
   ];
