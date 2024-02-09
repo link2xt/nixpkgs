@@ -59,8 +59,6 @@ stdenv.mkDerivation rec {
     lomiri.lomiri-ui-extras
     lomiri.lomiri-api
     lomiri.lomiri-indicator-network # Lomiri.Connectivity module
-#    (libdeltachat.overrideAttrs { patches = [ "${src}/libs/patches/dc_core_rust-CMakeLists.patch" ]; })
-#    quirc
   ];
 
   meta = with lib; {
