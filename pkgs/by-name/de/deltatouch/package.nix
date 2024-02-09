@@ -45,6 +45,8 @@ stdenv.mkDerivation rec {
   postInstall = ''
     mkdir -p $out/bin
     mv $out/deltatouch $out/bin
+    cp --no-preserve=mode ${libdeltachat}/lib/libdeltachat.so $out/lib/libdeltachat.so
+    cp --no-preserve=mode ${quirc}/lib/libquirc.so.1.0 $out/lib/libquirc.so.1.2
   '';
 
   buildInputs = [
