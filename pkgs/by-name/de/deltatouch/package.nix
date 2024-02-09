@@ -49,6 +49,8 @@ stdenv.mkDerivation rec {
     cp --no-preserve=mode ${quirc}/lib/libquirc.so.1.0 $out/lib/libquirc.so.1.2
   '';
 
+  qtWrapperArgs = [ ''--prefix QML2_IMPORT_PATH : ${placeholder "out"}/lib'' ];
+
   buildInputs = [
     qt5.qtbase
     qt5.qtwebengine
