@@ -4,7 +4,6 @@
 , cmake
 , intltool
 , libdeltachat
-, clickable
 , qt5
 , quirc
 , lomiri
@@ -26,7 +25,6 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     qt5.wrapQtAppsHook
     intltool
-    clickable
     cmake
   ];
 
